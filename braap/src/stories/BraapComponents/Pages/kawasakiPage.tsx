@@ -7,6 +7,10 @@ import { Grid } from "@material-ui/core";
 import makePageStyles from "./PageStyles";
 import Paper from '@material-ui/core/Paper';
 import background from "../assets/MogalibearAssets/BraapBraaaap-black-large.png";
+import Ninja_650 from "../assets/BikePic/650_2021.jpg";
+import Ninja_ZX10R from "../assets/BikePic/zx10r_2021.jpg";
+import Ninja_400 from "../assets/BikePic/400_2021.jpg";
+import Ninja_ZX6R from "../assets/BikePic/zx6r_2021.jpg";
 
 
 const styles = {
@@ -45,7 +49,7 @@ export const kawasakiPage = () => {
           >
             <Grid item xs={12} sm={6} md={4}>
               <MotoCard
-                bikeImage="http://api-motorcycle.makingdatameaningful.com/files/Kawasaki/2021/Kawasaki%20Ninja%20ZX-10R/Kawasaki_2021_Kawasaki%20Ninja%20ZX-10R.jpg"
+                bikeImage={Ninja_ZX10R}
                 bikeYear="2021"
                 bikeMake="Kawasaki"
                 bikeModel="Ninja ZX-10R"
@@ -80,7 +84,7 @@ export const kawasakiPage = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <MotoCard
-                bikeImage="http://api-motorcycle.makingdatameaningful.com/files/Kawasaki/2021/Kawasaki%20Ninja%20400/Kawasaki_2021_Kawasaki%20Ninja%20400.jpg"
+                bikeImage={Ninja_400}
                 bikeYear="2021"
                 bikeMake="Kawasaki"
                 bikeModel="Ninja 400"
@@ -115,7 +119,7 @@ export const kawasakiPage = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <MotoCard
-                bikeImage="http://api-motorcycle.makingdatameaningful.com/files/Kawasaki/2021/Kawasaki%20Ninja%20650/Kawasaki_2021_Kawasaki%20Ninja%20650.jpg"
+                bikeImage={Ninja_650}
                 bikeYear="2021"
                 bikeMake="Kawasaki"
                 bikeModel="Ninja 650"
@@ -150,7 +154,7 @@ export const kawasakiPage = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <MotoCard
-                bikeImage="http://api-motorcycle.makingdatameaningful.com/files/Kawasaki/2021/Kawasaki%20Ninja%20ZX-6R/Kawasaki_2021_Kawasaki%20Ninja%20ZX-6R.jpg"
+                bikeImage={Ninja_ZX6R}
                 bikeYear="2021"
                 bikeMake="Kawasaki"
                 bikeModel="Ninja ZX-6R"
