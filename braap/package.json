@@ -24,7 +24,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generate": "npx apollo service:download --endpoint=https://braapbraapbe.azurewebsites.net/graphql/ graphql-schema.json | npx apollo codegen:generate --localSchemaFile=graphql-schema.json --target=typescript --tagName=gql",
     "storybook": "start-storybook -p 6006 -s public",
