@@ -6,9 +6,13 @@ import  BraapFooter from "./stories/BraapComponents/Footer/BraapFooter";
 import  { HomePage } from "./stories/BraapComponents/Pages/HomePage";
 import  {  kawasakiPage } from "./stories/BraapComponents/Pages/kawasakiPage";
 import    HondaPage  from "./stories/BraapComponents/Pages/hondaPage";
+import { useQuery } from "@apollo/client";
+import { Self } from "./api/__generated__/Self";
+import { SELF } from "./api/queries";
 
 
 function App() {
+  const { loading, error, data } = useQuery<Self>(SELF);
   return (
     <div className="App">
       <Switch>
