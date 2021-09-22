@@ -1,7 +1,8 @@
 import React from "react";
-import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
+import { createStyles, Grid, makeStyles, Theme, IconButton } from "@material-ui/core";
 import {SocialIcon, SocialIconProps} from "../SocialIcon";
 import { Social_Media} from "../logoResources";
+import mogaliBearIconWhite from "../assets/MogalibearAssets/mogalibearIconwhite.png"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -25,6 +26,10 @@ const useStyles = makeStyles((theme: Theme) =>
             fontSize: 12,
             bottom: 0
         },
+        logo: {
+            flexgrow: 1,
+            height: "30px",
+        },
     }));
 
     
@@ -41,14 +46,21 @@ const useStyles = makeStyles((theme: Theme) =>
                     justifyContent="space-between"
                     alignItems="center"
                     spacing={2}>
-                   
-                    <Grid item xs={3}>
+                    <Grid item xs={2}>
                         {Social_Media.map((icon: SocialIconProps) =>{
                             return(
-                                <SocialIcon key={icon.name} {...icon} />
+                                <SocialIcon key={icon.name} {...icon}  />
                             )
                         })}
                     </Grid>
+                    <Grid item xs={1} />
+                        <Grid xs={1} item>
+                            <Grid container justify={"center"}>
+                                <IconButton edge="start" href="/home">
+                                    <img src={mogaliBearIconWhite} id={mogaliBearIconWhite}  alt="MogaliBear Logo" className={classes.logo}/>
+                                </IconButton>
+                            </Grid>
+                        </Grid>
                 </Grid>
             </footer>
 
