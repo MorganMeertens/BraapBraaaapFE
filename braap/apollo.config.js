@@ -1,7 +1,7 @@
 module.exports = {
   client: {
     service: {
-      name: "BraapBraaaapBE",
+      name: "BraapBraapBE",
       url: "http://braapbraapbe.azurewebsites.net/graphql/",
     },
   },
