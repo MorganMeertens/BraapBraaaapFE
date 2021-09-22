@@ -61,32 +61,6 @@ export const EDIT_COMPANY = gql`
   ${fragments.COMPANY}
 `;
 
-export const ADD_BRAPPUSER = gql`
-  mutation AddBraapUser(
-    $userName: String!
-    $gitHub: String!
-    $imageURI:String
-  ){
-    addBraapUser(input: {userName: $userName, gitHub: $gitHub, imageURI: $imageURI}){
-      ...braapuserFields
-    }
-  }
-  ${fragments.BRAAPUSER}
-  `;
-
-  export const EDIT_BRAAPUSER=gql`
-    mutation EditBraapUser(
-      $braapUserId: String!
-      $userName: String!
-      $gitHub: String!
-      $imageURI: String
-    ){
-      editBraapUser(input: {braapUserId: $braapUserId, userName: $userName, gitHub: $gitHub, imageURI: $imageURI}){
-        ...braapuserFields
-      }
-    }
-    ${fragments.BRAAPUSER}
-  `;
 
   export const ADD_REVIEW = gql`
   mutation AddReview(
@@ -112,3 +86,24 @@ export const ADD_BRAPPUSER = gql`
     }
     ${fragments.REVIEW}
   `;
+
+  export const LOGIN = gql`
+  mutation Login($code: String!) {
+    login(input: { code: $code }) {
+      user {
+        ...braapuserFields
+      }
+      jwt
+    }
+  }
+  ${fragments.BRAAPUSER}
+`;
+
+export const EDIT_SELF = gql`
+  mutation EditSelf($name: String, $imageURI: String) {
+    editSelf(input: { name: $name, imageURI: $imageURI }) {
+      ...braapuserFields
+    }
+  }
+  ${fragments.BRAAPUSER}
+`;

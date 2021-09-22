@@ -25,7 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "generate": "npx apollo service:download --endpoint=https://braapbraapbe.azurewebsites.net/graphql/ graphql-schema.json | npx apollo codegen:generate --localSchemaFile=graphql-schema.json --target=typescript --tagName=gql",
+    "generate": "npx apollo service:download --endpoint=https://braapbraapbe-oauth.azurewebsites.net/graphql/ graphqlOAuth-schema.json | npx apollo codegen:generate --localSchemaFile=graphqlOAuth-schema.json --target=typescript --tagName=gql",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },

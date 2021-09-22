@@ -124,3 +124,12 @@ export const REVIEWSFORMOTORBIKE = gql`
     ${fragments.PAGE_INFO}
     ${fragments.REVIEW}
 `
+
+export const SELF = gql`
+query Self {
+    self {
+        ...braapuserFields
+    }
+}
+${fragments.BRAAPUSER}
+`
