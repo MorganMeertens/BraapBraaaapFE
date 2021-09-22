@@ -4,6 +4,9 @@ import HomeIcon from "@material-ui/icons/Home";
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import TwoWheelerIcon from '@material-ui/icons/TwoWheeler';
 import { Dehaze } from "@material-ui/icons";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AddBoxIcon from '@material-ui/icons/AddBox';
+import { HeaderProps } from "../Header/HomeHeader";
 
 const useStyles = makeStyles({
     list: {
@@ -21,8 +24,14 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Sidebar(){
+const CLIENT_ID = "a6ac879139cfdf60af2a";
+const REDIRECT_URI = "http://localhost:3000/home";
+
+export const SideBar: React.FC<HeaderProps> = ({ user }) => {
     const classes = useStyles();
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+      }
     return(
         <div className={classes.list}>
             <List>
@@ -68,6 +77,19 @@ export default function Sidebar(){
                     <ListItemText className={classes.listText} primary="SUZUKI" />
                 </ListItem>
             </List>
+            <List>
+        {user ?
+          <ListItem button href="/home" component={Link} onClick={handleLogout}>
+            <ListItemIcon><ExitToAppIcon /></ListItemIcon>
+            <ListItemText className={classes.listText} primary="Logout" />
+          </ListItem> :
+          <ListItem button href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`} component={Link}>
+            <ListItemIcon><AddBoxIcon /></ListItemIcon>
+            <ListItemText className={classes.listText} primary="Login" />
+          </ListItem>
+
+        }
+      </List>
         </div>
     );
 };  
