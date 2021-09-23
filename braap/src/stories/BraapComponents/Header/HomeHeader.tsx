@@ -81,7 +81,7 @@ export interface LoginVariables {
 }
 
 const CLIENT_ID = "5c68337412d7eaea93c7";
-const REDIRECT_URI = "http://localhost:3000/home";
+const REDIRECT_URI = "https://braapbraapfe-oauth.azurewebsites.net/home";
 
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import './page.css';
 import background from "../assets/MogalibearAssets/backgroundImage.png";
-import  {HomeHeader} from "../Header/HomeHeader";
+import  {HeaderProps, HomeHeader} from "../Header/HomeHeader";
 import { useQuery } from '@apollo/client';
 import { Self } from '../../../api/__generated__/Self';
 import { SELF } from '../../../api/queries';
@@ -30,9 +30,9 @@ const styles = {
 
 
 
- const HomePage = (): JSX.Element => {
+ const HomePage: React.FC<HeaderProps> = ({ user }) => {
 
-const { loading, error, data } = useQuery<Self>(SELF);
+  const { loading, error, data } = useQuery<Self>(SELF);
   return(<div>
     <HomeHeader user={data?.self} />
     <Paper  style={styles.heroContainer} >
