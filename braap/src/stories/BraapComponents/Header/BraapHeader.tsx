@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dehaze} from "@material-ui/icons";
 import { AppBar, IconButton, Toolbar, makeStyles, Drawer} from "@material-ui/core";
-import Sidebar from "../basicSidebar/Sidebar";
+import {Sidebar} from "../basicSidebar/Sidebar";
 import mogaliBearIconWhite from "../assets/MogalibearAssets/WheelieIcon-Smoke.png"
 import braapbraaaapheader from "../assets/MogalibearAssets/BraapBraaaap-white.png"
 import Grid from '@material-ui/core/Grid';

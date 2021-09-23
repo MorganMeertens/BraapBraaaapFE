@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 const CLIENT_ID = "a6ac879139cfdf60af2a";
 const REDIRECT_URI = "http://localhost:3000/home";
 
-export const SideBar: React.FC<HeaderProps> = ({ user }) => {
+export const Sidebar: React.FC<HeaderProps> = ({ user }) => {
     const classes = useStyles();
     const handleLogout = () => {
         localStorage.removeItem("token");

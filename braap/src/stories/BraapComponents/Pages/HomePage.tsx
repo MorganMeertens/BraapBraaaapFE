@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import './page.css';
 import background from "../assets/MogalibearAssets/backgroundImage.png";
-import  HomeHeader from "../Header/HomeHeader";
+import  {HomeHeader} from "../Header/HomeHeader";
 
 
 interface PageProps {

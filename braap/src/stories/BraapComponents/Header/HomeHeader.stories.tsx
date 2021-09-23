@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import HomeHeader from "./HomeHeader";
+import {HomeHeader} from "./HomeHeader";
 
 export default {
     title: 'Home Components/HomeHeader',
