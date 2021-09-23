@@ -1,13 +1,25 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {HomeHeader} from "./HomeHeader";
+import {HeaderProps, HomeHeader} from "./HomeHeader";
+import { Story, Meta } from '@storybook/react';
 
 export default {
     title: 'Home Components/HomeHeader',
     component: HomeHeader,
-} as ComponentMeta<typeof HomeHeader>;
+} as Meta;
 
-const Template: ComponentStory<typeof HomeHeader> = () => <HomeHeader />;
+const Template: Story<HeaderProps> = (args) => <HomeHeader {...args} />;
 
-export const HeaderForHome = Template.bind({});
+export const LoggedIn = Template.bind({});
+LoggedIn.args = {
+  user: {
+    __typename: "BraapUser",
+    id: "1",
+    userName: "John Doe",
+    gitHub: "johndoe",
+    imageURI: "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+  },
+};
 
+export const LoggedOut = Template.bind({});
+LoggedOut.args = {
+};

@@ -3,7 +3,7 @@ import {Redirect, Route, Switch } from "react-router";
 import "./App.css";
 
 import  BraapFooter from "./stories/BraapComponents/Footer/BraapFooter";
-import  { HomePage } from "./stories/BraapComponents/Pages/HomePage";
+import   HomePage  from "./stories/BraapComponents/Pages/HomePage";
 import  {  kawasakiPage } from "./stories/BraapComponents/Pages/kawasakiPage";
 import    HondaPage  from "./stories/BraapComponents/Pages/hondaPage";
 import { useQuery } from "@apollo/client";
@@ -21,7 +21,7 @@ function App() {
         </Route>
         <Route path="/home" component={HomePage} />
         <Route path="/Motorbikes-Kawasaki" component={kawasakiPage} />
-        <Route path="/Motorbikes-Honda" component={HondaPage} />
+        <Route path="/Motorbikes-Honda"  render={() => <HondaPage  />} />
         <Route path="/Motorbikes-Yamaha" component={HomePage} />
         <Route path="/Motorbikes-Suzuki" component={HomePage} />
         <Route path="/AllMotorbikes" component={HomePage} />

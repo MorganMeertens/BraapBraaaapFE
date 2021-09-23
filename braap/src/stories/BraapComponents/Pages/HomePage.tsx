@@ -3,9 +3,12 @@ import Paper from '@material-ui/core/Paper';
 import './page.css';
 import background from "../assets/MogalibearAssets/backgroundImage.png";
 import  {HomeHeader} from "../Header/HomeHeader";
+import { useQuery } from '@apollo/client';
+import { Self } from '../../../api/__generated__/Self';
+import { SELF } from '../../../api/queries';
 
 
-interface PageProps {
+export interface PageProps {
   user?: {};
   onLogin: () => void;
   onLogout: () => void;
@@ -25,16 +28,21 @@ const styles = {
   },
 };
 
-export const HomePage = ({ user, onLogin, onLogout, onCreateAccount }: PageProps) => (
 
-  <div>
-    <HomeHeader />
+
+ const HomePage = (): JSX.Element => {
+
+const { loading, error, data } = useQuery<Self>(SELF);
+  return(<div>
+    <HomeHeader user={data?.self} />
     <Paper  style={styles.heroContainer} >
     </Paper>
   </div>
   
-    
-);
+  ) 
+};
 
 
 
+  
+export default HomePage;

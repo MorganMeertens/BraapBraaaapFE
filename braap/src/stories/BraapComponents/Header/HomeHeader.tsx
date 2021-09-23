@@ -10,7 +10,7 @@ import {
     Toolbar,
     Typography,
 } from "@material-ui/core";
-import  { Sidebar } from "../basicSidebar/Sidebar";
+import { Sidebar } from "../basicSidebar/Sidebar";
 import mogaliBearIconWhite from "../assets/MogalibearAssets/mogalibearIconwhite.png"
 import Grid from '@material-ui/core/Grid';
 import { useHistory, useLocation } from "react-router-dom";
@@ -120,33 +120,44 @@ export const HomeHeader: React.FC<HeaderProps> = ({ user }) => {
         <div className={classes.root}>
             <AppBar className={classes.appBar} position="static">
                 <Toolbar>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={toggleSideBar}
-                    >
-                        <Dehaze />
-                        <Drawer anchor="left" open={sideBar} onClose={toggleSideBar}>
-                            <Sidebar user={user} />
-                        </Drawer>
-                    </IconButton>
-                    {user == null ? (
-                        <Button
+                    <Grid justify={"space-between"} container>
+                        <IconButton
+                            edge="start"
+                            className={classes.menuButton}
                             color="inherit"
-                            href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`}
+                            aria-label="open drawer"
+                            onClick={toggleSideBar}
                         >
-                            Login
-                        </Button>
-                    ) : (
-                        <div className={classes.userInformation}>
-                            <Hidden smDown>
-                                <Avatar alt="user-avatar" src={user.imageURI} />
-                                <Button color="inherit" href="/submit">{user.userName}</Button>
-                            </Hidden>
-                        </div>
-                    )}
+                            <Dehaze />
+                            <Drawer anchor="left" open={sideBar} onClose={toggleSideBar}>
+                                <Sidebar user={user} />
+                            </Drawer>
+                        </IconButton>
+                        <Grid item xs={1} />
+                        <Grid xs={4} item>
+
+                        </Grid>
+                        <Grid item xs={1} />
+                        <Grid xs={1} item>
+                            <Grid container justify={"center"}>
+                                {user == null ? (
+                                    <Button
+                                        color="inherit"
+                                        href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`}
+                                    >
+                                        Login
+                                    </Button>
+                                ) : (
+                                    <div className={classes.userInformation}>
+                                        <Hidden smDown>
+                                            <Avatar alt="user-avatar" src={user.imageURI} />
+                                            <Button >{user.userName}</Button>
+                                        </Hidden>
+                                    </div>
+                                )}
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </Toolbar>
             </AppBar>
         </div>
