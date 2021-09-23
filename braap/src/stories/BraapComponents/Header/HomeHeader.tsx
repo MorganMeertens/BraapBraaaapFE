@@ -10,7 +10,7 @@ import {
     Toolbar,
     Typography,
 } from "@material-ui/core";
-import  { SideBar } from "../basicSidebar/Sidebar";
+import  { Sidebar } from "../basicSidebar/Sidebar";
 import mogaliBearIconWhite from "../assets/MogalibearAssets/mogalibearIconwhite.png"
 import Grid from '@material-ui/core/Grid';
 import { useHistory, useLocation } from "react-router-dom";
@@ -85,7 +85,7 @@ const REDIRECT_URI = "http://localhost:3000/home";
 
 
 
-export const Header: React.FC<HeaderProps> = ({ user }) => {
+export const HomeHeader: React.FC<HeaderProps> = ({ user }) => {
     const [sideBar, setSideBar] = useState(false);
     const classes = useStyles();
 
@@ -129,12 +129,9 @@ export const Header: React.FC<HeaderProps> = ({ user }) => {
                     >
                         <Dehaze />
                         <Drawer anchor="left" open={sideBar} onClose={toggleSideBar}>
-                            <SideBar user={user} />
+                            <Sidebar user={user} />
                         </Drawer>
                     </IconButton>
-                    <Typography className={classes.title} variant="h5" noWrap>
-                        Welcome, open the sidebar to get started.
-                    </Typography>
                     {user == null ? (
                         <Button
                             color="inherit"
