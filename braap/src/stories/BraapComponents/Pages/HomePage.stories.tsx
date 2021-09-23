@@ -10,7 +10,7 @@ export default {
   component: HomePage,
 } as Meta;
 
-const Template: Story<PageProps> = (args) => <HomePage />;
+const Template: Story<PageProps> = (args) => <HomePage {...args} />;
 
 
 export const LoggedIn = Template.bind({});

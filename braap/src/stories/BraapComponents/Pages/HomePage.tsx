@@ -30,7 +30,7 @@ const styles = {
 
 
 
- const HomePage: React.FC<HeaderProps> = ({ user }) => {
+ const HomePage: React.FC<PageProps> = ({ user }) => {
 
   const { loading, error, data } = useQuery<Self>(SELF);
   return(<div>
