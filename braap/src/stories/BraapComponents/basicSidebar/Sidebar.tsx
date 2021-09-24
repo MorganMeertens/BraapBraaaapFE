@@ -6,7 +6,7 @@ import TwoWheelerIcon from '@material-ui/icons/TwoWheeler';
 import { Dehaze } from "@material-ui/icons";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AddBoxIcon from '@material-ui/icons/AddBox';
-import { HeaderProps } from "../Header/HomeHeader";
+import  {HeaderProps}  from "../Header/HomeHeader";
 
 const useStyles = makeStyles({
     list: {

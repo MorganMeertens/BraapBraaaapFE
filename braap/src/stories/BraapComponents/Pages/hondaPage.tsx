@@ -74,7 +74,6 @@ const HondaPageStyles = makeStyles(
   
       return <div className={styles.page}>
           <div className={styles.header}>
-              <BraapHeader />
           </div>
           {cards.length === 0 ? <CircularProgress /> : <CardList cards={cards} cols={window.innerWidth / 650} />}
       </div>

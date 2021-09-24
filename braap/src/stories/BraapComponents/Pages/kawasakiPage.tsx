@@ -32,7 +32,6 @@ export const kawasakiPage = () => {
   const classes = makePageStyles();
   return (
     <div>
-      <BraapHeader />
       <Paper style={styles.root} >
 
         <div className="wrapper">

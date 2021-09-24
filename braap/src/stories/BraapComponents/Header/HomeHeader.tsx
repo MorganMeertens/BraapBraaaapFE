@@ -8,10 +8,8 @@ import {
     Hidden,
     IconButton,
     Toolbar,
-    Typography,
 } from "@material-ui/core";
 import { Sidebar } from "../basicSidebar/Sidebar";
-import mogaliBearIconWhite from "../assets/MogalibearAssets/mogalibearIconwhite.png"
 import Grid from '@material-ui/core/Grid';
 import { useHistory, useLocation } from "react-router-dom";
 import { useMutation } from "@apollo/client";

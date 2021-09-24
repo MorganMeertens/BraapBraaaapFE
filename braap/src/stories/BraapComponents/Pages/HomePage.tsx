@@ -34,7 +34,6 @@ const styles = {
 
   const { loading, error, data } = useQuery<Self>(SELF);
   return(<div>
-    <HomeHeader user={data?.self} />
     <Paper  style={styles.heroContainer} >
     </Paper>
   </div>
