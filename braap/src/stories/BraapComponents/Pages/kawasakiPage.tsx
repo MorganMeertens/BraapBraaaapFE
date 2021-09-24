@@ -1,8 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import BraapHeader from "../Header/BraapHeader";
 import MotoCard from "../Cards/MotoCard";
-import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import makePageStyles from "./PageStyles";
 import Paper from '@material-ui/core/Paper';

@@ -149,7 +149,7 @@ export const HomeHeader: React.FC<HeaderProps> = ({ user }) => {
                                     <div className={classes.userInformation}>
                                         <Hidden smDown>
                                             <Avatar alt="user-avatar" src={user.imageURI} />
-                                            <Button >{user.userName}</Button>
+                                            <Button color="inherit">{user.userName}</Button>
                                         </Hidden>
                                     </div>
                                 )}

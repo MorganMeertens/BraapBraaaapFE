@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardMedia, Card, CardActionArea, CardContent, CardHeader, Divider } from '@material-ui/core';
+import { CardMedia, Card, CardContent, CardHeader } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import CardActions from '@material-ui/core/CardActions';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';

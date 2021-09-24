@@ -2,7 +2,6 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import './page.css';
 import background from "../assets/MogalibearAssets/backgroundImage.png";
-import  {HeaderProps, HomeHeader} from "../Header/HomeHeader";
 import { useQuery } from '@apollo/client';
 import { Self } from '../../../api/__generated__/Self';
 import { SELF } from '../../../api/queries';
