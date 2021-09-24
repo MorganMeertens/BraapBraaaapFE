@@ -3,7 +3,6 @@ import { Link, List, ListItem, ListItemIcon, ListItemText, makeStyles } from "@m
 import HomeIcon from "@material-ui/icons/Home";
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import TwoWheelerIcon from '@material-ui/icons/TwoWheeler';
-import { Dehaze } from "@material-ui/icons";
 
 const useStyles = makeStyles({
     list: {

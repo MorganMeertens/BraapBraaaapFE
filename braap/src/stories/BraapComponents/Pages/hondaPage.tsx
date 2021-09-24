@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { makeStyles, createStyles, CircularProgress, Avatar, Typography } from '@material-ui/core';
+import { makeStyles, createStyles, CircularProgress,  Typography } from '@material-ui/core';
 
 import  BraapHeader from "../Header/BraapHeader";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { AllMotorbikesByCompany, AllMotorbikesByCompany_allMotorbikesByCompany_nodes } from "../../../api/__generated__/AllMotorbikesByCompany";
-import { MOTORBIKES, MOTORBIKESBYCOMPANY } from "../../../api/queries";
+import {  MOTORBIKESBYCOMPANY } from "../../../api/queries";
 import MotoCard from "../Cards/MotoCard";
 import CardList from "../CardList/CardList";
-import { AllMotorbikes, AllMotorbikes_allMotorbikes_nodes } from "../../../api/__generated__/AllMotorbikes";
 
 
 const HondaPageStyles = makeStyles(
@@ -83,16 +82,3 @@ const HondaPageStyles = makeStyles(
   
   export default HondaPage;
 
-  /*
-export const hondaPage = () => {
-  return (
-  <div>
-    <BraapHeader/>
-    <Typography variant="h3">This page contains the honda bikes</Typography>;
-
-
-
-
-  </div>
-  )
-  };*/
